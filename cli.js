@@ -16,6 +16,7 @@ const HELP = `muhandis-rls-check
                                       print the read-only query to run in your Supabase SQL Editor
   muhandis-rls-check result.json      اشرح النتيجة جدول جدول / explain the result, table by table
   cat result.json | muhandis-rls-check
+  muhandis-rls-check mcp              شغّل خادم MCP لمساعد الذكاء الاصطناعي / start the MCP server
   --json                              النتيجة بصيغة JSON / machine-readable output
 
 The same check in the browser: ${TOOL_URL}`
@@ -24,7 +25,10 @@ function read(src) {
   return src === '-' || !src ? readFileSync(0, 'utf8') : readFileSync(src, 'utf8')
 }
 
-if (rest[0] === 'query') {
+if (rest[0] === 'mcp') {
+  // `npx -y muhandis-rls-check mcp` starts the MCP server: one package, one command, on every OS (npx -p … fails under cmd).
+  require('./mcp.js')
+} else if (rest[0] === 'query') {
   process.stdout.write(QUERY + '\n')
 } else if (rest[0] === '-h' || rest[0] === '--help' || (!rest.length && process.stdin.isTTY)) {
   process.stdout.write(HELP + '\n')

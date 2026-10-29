@@ -36,7 +36,7 @@ npx muhandis-rls-check result.json --json          # نفس الشرح بصيغ�
 ```json
 {
   "mcpServers": {
-    "muhandis-rls-check": { "command": "npx", "args": ["-y", "-p", "muhandis-rls-check", "muhandis-rls-check-mcp"] }
+    "muhandis-rls-check": { "command": "npx", "args": ["-y", "muhandis-rls-check", "mcp"] }
   }
 }
 ```
@@ -75,7 +75,7 @@ npx muhandis-rls-check query          # print the query
 npx muhandis-rls-check result.json    # explain the result (exit code 1 if a table is exposed)
 ```
 
-MCP server: `npx -y -p muhandis-rls-check muhandis-rls-check-mcp`. Tools: `rls_check_query` and `rls_check_explain`.
+MCP server: `npx -y muhandis-rls-check mcp`. Tools: `rls_check_query` and `rls_check_explain`.
 
 Supabase's own Security Advisor flags related issues (RLS disabled, security-definer views, permissive policies). This tool adds a founder-level explanation in Arabic, and a link to how to fix each finding.
 
