@@ -1,0 +1,51 @@
+{
+  "name": "muhandis-rls-check",
+  "version": "0.1.0",
+  "description": "Read-only Supabase RLS check that explains, in plain Arabic, which tables anyone can read or change. CLI and MCP server; no keys, no connection.",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test test/rls-check.test.js"
+  },
+  "keywords": [
+    "supabase",
+    "rls",
+    "row-level-security",
+    "postgres",
+    "security",
+    "mcp",
+    "arabic",
+    "lovable",
+    "bolt",
+    "vibe-coding"
+  ],
+  "author": "Muhandis (https://muhandis.online)",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "bin": {
+    "muhandis-rls-check": "cli.js",
+    "muhandis-rls-check-mcp": "mcp.js"
+  },
+  "files": [
+    "lib",
+    "cli.js",
+    "mcp.js",
+    "query.sql",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://muhandis.online/tools/rls-check",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muhandis-online/rls-check.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
