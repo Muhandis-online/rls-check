@@ -47,5 +47,6 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "mcpName": "io.github.Muhandis-online/rls-check"
 }
