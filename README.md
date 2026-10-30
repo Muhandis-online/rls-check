@@ -77,6 +77,21 @@ npx muhandis-rls-check result.json    # explain the result (exit code 1 if a tab
 
 MCP server: `npx -y muhandis-rls-check mcp`. Tools: `rls_check_query` and `rls_check_explain`.
 
+### Claude skill
+
+The same check as a [Claude skill](skills/rls-check/SKILL.md): Claude gives you the query, then runs the pasted result
+through `skills/rls-check/scripts/rls_check.py`, a Python copy of the analyser that the tests hold to the same output
+as `lib/rls-check.js`. It needs no key and makes no network call.
+
+- **Claude app:** download `rls-check.zip` from the [latest release](https://github.com/Muhandis-online/rls-check/releases/latest),
+  then Customize > Skills > upload it and turn it on. Code execution must be enabled.
+- **Claude Code:**
+
+```
+/plugin marketplace add Muhandis-online/rls-check
+/plugin install rls-check@muhandis
+```
+
 Supabase's own Security Advisor flags related issues (RLS disabled, security-definer views, permissive policies). This tool adds a founder-level explanation in Arabic, and a link to how to fix each finding.
 
 Made by [Muhandis](https://muhandis.online), a software company for businesses in Saudi Arabia and the GCC. MIT licence.

@@ -1,0 +1,11 @@
+{
+  "name": "muhandis",
+  "owner": { "name": "Muhandis", "url": "https://muhandis.online" },
+  "plugins": [
+    {
+      "name": "rls-check",
+      "source": "./",
+      "description": "Read-only Supabase RLS check that explains, in plain Arabic, which tables anyone can read or change."
+    }
+  ]
+}
