@@ -23,7 +23,7 @@
     "bolt",
     "vibe-coding"
   ],
-  "author": "Muhandis (https://muhandis.online)",
+  "author": "Muhandis (https://muhandis.online/?utm_source=npm)",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
@@ -41,7 +41,7 @@
     "README.md",
     "LICENSE"
   ],
-  "homepage": "https://muhandis.online/tools/rls-check",
+  "homepage": "https://muhandis.online/tools/rls-check?utm_source=npm",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Muhandis-online/rls-check.git"

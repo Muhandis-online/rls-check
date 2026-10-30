@@ -12,14 +12,14 @@ The findings are written in **Arabic for non-technical founders**, with English 
 - **It reads no data.** The query reads table descriptions only: RLS state, policies, grants and column names. Never a row.
 - **It needs no key or password** and opens no connection to your database. You run the query yourself, or an agent
   runs it through the official Supabase MCP.
-- **It is the same check as the browser tool** at [muhandis.online/tools/rls-check](https://muhandis.online/tools/rls-check):
+- **It is the same check as the browser tool** at [muhandis.online/tools/rls-check](https://muhandis.online/tools/rls-check?utm_source=github):
   `lib/rls-check.js` is the site's analyser, copied byte for byte.
 
 ## Usage
 
 ### 1. In the browser (easiest)
 
-Open [the check page](https://muhandis.online/tools/rls-check), copy the query, run it in Supabase and paste the
+Open [the check page](https://muhandis.online/tools/rls-check?utm_source=github), copy the query, run it in Supabase and paste the
 result. Everything happens in your browser; nothing is sent anywhere.
 
 ### 2. From the command line
@@ -80,8 +80,8 @@ one sees only its own rows. Supabase's own Security Advisor flags related issues
 permissive policies); this tool adds an explanation in Arabic for the product's owner, and a link to how to fix each
 finding.
 
-Found an exposed table and want an engineer to fix it with you? [muhandis.online/services/fix](https://muhandis.online/services/fix)
+Found an exposed table and want an engineer to fix it with you? [muhandis.online/services/fix](https://muhandis.online/services/fix?utm_source=github)
 
 ---
 
-Made by [Muhandis](https://muhandis.online), a software company for businesses in Saudi Arabia and the GCC. MIT licence.
+Made by [Muhandis](https://muhandis.online/?utm_source=github), a software company for businesses in Saudi Arabia and the GCC. MIT licence.

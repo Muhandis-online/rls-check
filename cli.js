@@ -4,7 +4,7 @@
 'use strict'
 
 const { readFileSync } = require('node:fs')
-const { QUERY, TOOL_URL, explain, report } = require('./lib')
+const { QUERY, TOOL_URL, tag, explain, report } = require('./lib')
 
 const args = process.argv.slice(2)
 const json = args.includes('--json')
@@ -19,7 +19,7 @@ const HELP = `muhandis-rls-check
   muhandis-rls-check mcp              شغّل خادم MCP لمساعد الذكاء الاصطناعي / start the MCP server
   --json                              النتيجة بصيغة JSON / machine-readable output
 
-The same check in the browser: ${TOOL_URL}`
+The same check in the browser: ${tag(TOOL_URL, 'npm')}`
 
 function read(src) {
   return src === '-' || !src ? readFileSync(0, 'utf8') : readFileSync(src, 'utf8')

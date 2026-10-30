@@ -5,7 +5,7 @@ description: Read-only Supabase Row Level Security check that explains, in plain
 
 # RLS check by Muhandis
 
-The same check as https://muhandis.online/tools/rls-check and the `muhandis-rls-check` npm package. The user runs one
+The same check as https://muhandis.online/tools/rls-check?utm_source=claude-skill and the `muhandis-rls-check` npm package. The user runs one
 read-only query in their own Supabase SQL Editor; you explain the result table by table. The query reads table
 descriptions only (RLS on or off, policies, grants, column names), never a row of data.
 

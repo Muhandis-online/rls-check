@@ -1,6 +1,6 @@
 {
   "name": "muhandis",
-  "owner": { "name": "Muhandis", "url": "https://muhandis.online" },
+  "owner": { "name": "Muhandis", "url": "https://muhandis.online/?utm_source=claude-plugin" },
   "plugins": [
     {
       "name": "rls-check",

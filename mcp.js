@@ -6,7 +6,7 @@
 const { McpServer } = require('@modelcontextprotocol/sdk/server/mcp.js')
 const { StdioServerTransport } = require('@modelcontextprotocol/sdk/server/stdio.js')
 const { z } = require('zod')
-const { QUERY, TOOL_URL, explain, report } = require('./lib')
+const { QUERY, TOOL_URL, tag, explain, report } = require('./lib')
 const { version } = require('./package.json')
 
 const server = new McpServer({ name: 'muhandis-rls-check', version })
@@ -23,10 +23,10 @@ server.registerTool('rls_check_explain', {
   inputSchema: { result: z.string().describe('The JSON result cell of rls_check_query, as text (it starts with {"tool":"muhandis-rls-check"...)') },
   annotations: { readOnlyHint: true, openWorldHint: false },
 }, async ({ result }) => {
-  const r = explain(result)
+  const r = explain(result, 'mcp')
   return {
     content: [
-      { type: 'text', text: report(result) },
+      { type: 'text', text: report(result, 'mcp') },
       { type: 'text', text: JSON.stringify(r) },
     ],
     isError: !r.ok,
@@ -35,7 +35,7 @@ server.registerTool('rls_check_explain', {
 
 server.registerPrompt('rls_check', {
   title: 'Check my Supabase tables',
-  description: 'Run the read-only RLS check on this project and explain it in Arabic. Browser version: ' + TOOL_URL,
+  description: 'Run the read-only RLS check on this project and explain it in Arabic. Browser version: ' + tag(TOOL_URL, 'mcp'),
 }, () => ({
   messages: [{ role: 'user', content: { type: 'text', text: 'Call rls_check_query, run the query on my Supabase project (read-only), pass the result to rls_check_explain, then summarise the exposed tables first, in Arabic, with the fix for each.' } }],
 }))

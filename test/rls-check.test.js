@@ -19,7 +19,7 @@ test('names every table by what anyone can do with it, the worst first', () => {
     contact_messages: 'amber', products: 'amber', locked: 'grey', no_grants: 'grey', notes_owner: 'green', safe_view: 'green',
   })
   assert.deepStrictEqual(r.counts, { red: 4, amber: 2, grey: 2, green: 2 })
-  assert.strictEqual(r.tables.find(t => t.name === 'profiles_open').findings[0].link, 'https://muhandis.online/lessons/supabase-rls-policy-violation')
+  assert.strictEqual(r.tables.find(t => t.name === 'profiles_open').findings[0].link, 'https://muhandis.online/lessons/supabase-rls-policy-violation?utm_source=npm')
 })
 
 test('reads the result however it is pasted, and refuses anything else', () => {
