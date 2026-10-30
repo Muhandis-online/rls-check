@@ -1,7 +1,7 @@
 {
   "name": "rls-check",
   "description": "Read-only Supabase RLS check that explains, in plain Arabic, which tables anyone can read or change. No keys, no connection.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": { "name": "Muhandis", "url": "https://muhandis.online/?utm_source=claude-plugin" },
   "homepage": "https://muhandis.online/tools/rls-check?utm_source=claude-plugin",
   "repository": "https://github.com/Muhandis-online/rls-check",

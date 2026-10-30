@@ -1,6 +1,6 @@
 {
   "name": "muhandis-rls-check",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Read-only Supabase RLS check that explains, in plain Arabic, which tables anyone can read or change. CLI and MCP server; no keys, no connection.",
   "main": "lib/index.js",
   "directories": {
